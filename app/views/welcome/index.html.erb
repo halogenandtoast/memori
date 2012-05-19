@@ -1,3 +1,16 @@
 <header>
   <h1>Memori メモリ</h1>
 </header>
+<section>
+  <%= form_for(:session, url: session_path) do |form| %>
+    <div>
+      <%= form.email_field :email, placeholder: "email" %>
+    </div>
+    <div>
+      <%= form.password_field :password, placeholder: "password" %>
+    </div>
+    <div>
+      <%= form.submit "Sign in" %>
+    </div>
+  <% end %>
+</section>
