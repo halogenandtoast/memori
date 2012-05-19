@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120519194624) do
+ActiveRecord::Schema.define(:version => 20120519204418) do
+
+  create_table "cards", :force => true do |t|
+    t.text    "front"
+    t.text    "back"
+    t.integer "deck_id"
+  end
+
+  add_index "cards", ["deck_id"], :name => "index_cards_on_deck_id"
+
+  create_table "decks", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
