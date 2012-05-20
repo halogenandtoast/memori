@@ -8,11 +8,6 @@
   <span class="value"><%= @card.back %></span>
 </div>
 
-<div class="buttons">
-  <%= link_to "Didn't Know", card_record_path(@record), method: :put, class: "did_not_know-button" %>
-  <%= link_to 'Knew', card_record_path(@record, knew: '1'), method: :put, class: "knew-button" %>
-</div>
-
 <div>Seen: <%= @record.seen_count %></div>
 <div>Last Seen: <%= time_ago_in_words @record.last_seen_at %></div>
 <div>Right: <%= @record.right_count %></div>

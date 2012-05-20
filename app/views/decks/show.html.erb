@@ -1,12 +1,10 @@
 <header>
   <h1><%= @deck.name %></h1>
-  <%= link_to "Study", [:study, @deck] %>
+  <%= link_to "Study", [:study, @deck], class: "study" %>
 </header>
 
 <section>
   <% @cards.each do |card| %>
-    <div class="card">
-      <%= card.front %>
-    </div>
+    <%= link_to card.front, card, class: "card" %>
   <% end %>
 </section>

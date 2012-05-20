@@ -1,6 +1,8 @@
 class CardsController < ApplicationController
-  def index
-    @deck = Deck.find(params[:deck_id])
-    @cards = @deck.cards
+  before_filter :authorize
+
+  def show
+    @card = Card.find(params[:id])
+    @record = current_user.record_for_card(@card)
   end
 end

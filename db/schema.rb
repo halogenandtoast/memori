@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120519204418) do
+ActiveRecord::Schema.define(:version => 20120520011322) do
+
+  create_table "card_records", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "card_id"
+    t.integer  "seen_count",   :default => 0
+    t.integer  "wrong_count",  :default => 0
+    t.integer  "right_count",  :default => 0
+    t.integer  "bucket",       :default => 0
+    t.boolean  "active",       :default => false
+    t.datetime "last_seen_at"
+  end
+
+  add_index "card_records", ["user_id", "card_id"], :name => "index_card_records_on_user_id_and_card_id", :unique => true
+  add_index "card_records", ["user_id"], :name => "index_card_records_on_user_id"
 
   create_table "cards", :force => true do |t|
     t.text    "front"

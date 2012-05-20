@@ -1,5 +1,6 @@
 <% if signed_in? %>
   <div class="bar">
+    <%= yield :bar %>
     <%= link_to "Sign out", sign_out_path, method: :delete %>
   </div>
 <% end %>
