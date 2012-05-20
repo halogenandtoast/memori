@@ -21,7 +21,9 @@ input[type="url"] {
 
 button,
 input[type="button"],
-input[type="reset"],
+input[type="reset"] {
+  @include botan(#ccc);
+}
 input[type="submit"] {
-  @extend .button;
+  @include botan($orange);
 }

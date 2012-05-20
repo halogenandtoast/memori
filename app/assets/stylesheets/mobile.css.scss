@@ -1,10 +1,10 @@
 @import 'bourbon';
-@import 'reset';
+@import 'mixins';
 @import 'variables';
+@import 'reset';
 @import 'grid';
 @import 'typography';
 @import 'forms';
-@import 'mixins';
 
 // to remove
 @import 'cards';
