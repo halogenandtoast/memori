@@ -9,7 +9,7 @@
 </div>
 
 <div>Seen: <%= @record.seen_count %></div>
-<div>Last Seen: <%= time_ago_in_words @record.last_seen_at %></div>
+<div>Last Seen: <%= @record.last_seen_at ? time_ago_in_words(@record.last_seen_at) : "Never" %></div>
 <div>Right: <%= @record.right_count %></div>
 <div>Wrong: <%= @record.wrong_count %></div>
 <div>Bucket: <%= @record.bucket %></div>
