@@ -1,0 +1,10 @@
+h1 {
+  font-size: $h1-size;
+}
+
+@for $i from 2 through 6 {
+  h#{$i} {
+    font-size: $h1-size * $ratio;
+    $ratio: $ratio * .9;
+  }
+}

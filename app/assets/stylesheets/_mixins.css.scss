@@ -1,0 +1,11 @@
+.button {
+  @include border-radius(4px);
+  padding: 10px 20px;
+  @include background-image(linear-gradient(top, lighten($orange, 10%) 0%, lighten($orange, 6%) 50%, $orange 50%, darken($orange, 10%) 100%));
+  @include box-shadow(inset 0px 1px 0px lighten($orange, 30%));
+  border: 1px solid darken($orange, 10%);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: darken($orange, 30%);
+  text-shadow: 0px 1px 0px lighten($orange, 30%);
+}

@@ -3,6 +3,45 @@
 @import 'variables';
 @import 'grid';
 @import 'typography';
+@import 'forms';
+@import 'mixins';
 
 // to remove
 @import 'cards';
+
+html {
+  background-image: url("/images/bg.png");
+}
+body {
+  @extend .clearfix;
+  color: #555;
+}
+
+div.wrapper {
+  @include fill-parent();
+}
+
+header {
+  @include background-image(linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0)));
+
+  h1 > img {
+    @include fill-parent();
+  }
+}
+
+section.main {
+  padding: 0 15px;
+
+  form.sign-in {
+    padding-top: 15px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+
+    input {
+      @include fill-parent();
+      margin: 5px 0;
+    }
+  }
+}

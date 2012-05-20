@@ -1,0 +1,27 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"] {
+  @include background-image(linear-gradient(top, #c6daba, #e1ecdb));
+  border: 1px solid #8fb777;
+  @include border-radius(4px);
+  @include box-shadow( 0 1px 0 #fff);
+  @include box-sizing(border-box);
+  font-size: 15px;
+  padding: 7px 5px;
+  color: #3d552e;
+}
+
+::-webkit-input-placeholder {
+  color: $placeholder-color;
+}
+:-moz-placeholder {
+  color:  $placeholder-color;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  @extend .button;
+}
