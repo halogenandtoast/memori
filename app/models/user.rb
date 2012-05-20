@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   def lowest_card_ids_for_deck(deck, range = 100)
     scores = {}
     deck.card_ids.each { |id| scores[id] = 200 }
-    card_records.each { |record| scores[record.card_id] = record.srs_score }
+    card_records.where(card_id: deck.card_ids).each { |record| scores[record.card_id] = record.srs_score }
     logger.info scores.inspect
     sorted_scores = scores.sort_by{|key, value| value}
     lowest_score = sorted_scores[0][1]

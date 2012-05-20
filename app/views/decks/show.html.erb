@@ -1,3 +1,6 @@
+<% content_for :bar do %>
+  <%= link_to "Back", decks_path, class: "back" %>
+<% end %>
 <header>
   <h1><%= @deck.name %></h1>
   <%= link_to "Study", [:study, @deck], class: "study" %>
