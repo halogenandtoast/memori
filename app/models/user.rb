@@ -11,12 +11,26 @@ class User < ActiveRecord::Base
     existing_record_for_card(card) || build_record_for_card(card)
   end
 
+  def next_card_for_deck(deck)
+    ids = lowest_card_ids_for_deck(deck)
+    Card.find(ids.shuffle.first)
+  end
+
+  def lowest_card_ids_for_deck(deck, range = 100)
+    scores = {}
+    deck.card_ids.each { |id| scores[id] = 200 }
+    card_records.where(card_id: deck.card_ids).each { |record| scores[record.card_id] = record.srs_score }
+    logger.info scores.inspect
+    sorted_scores = scores.sort_by{|key, value| value}
+    lowest_score = sorted_scores[0][1]
+    set = sorted_scores.select{|id, score| score < lowest_score + range}
+    set.map{|id, score| id}
+  end
+
   private
 
   def existing_record_for_card(card)
-    record = card_records.where(card_id: card.id).first
-    logger.info record
-    record
+    card_records.where(card_id: card.id).first
   end
 
   def build_record_for_card(card)

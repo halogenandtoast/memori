@@ -5,7 +5,7 @@ class StudyController < ApplicationController
     if @record = current_user.current_record_for_deck(@deck)
       @card = @record.card
     else
-      @card = @deck.cards.order("RANDOM()").first
+      @card = current_user.next_card_for_deck(@deck)
       @record = current_user.record_for_card(@card)
       @record.activate!
       @record.seen!
