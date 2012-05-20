@@ -1,10 +1,25 @@
+h1, h2, h3, h4, h5 {
+  font-family: $cursive;
+  color: darken($green, 20%);
+}
+
 h1 {
   font-size: $h1-size;
+  margin-bottom: $h1-size/6;
 }
 
 @for $i from 2 through 6 {
   h#{$i} {
     font-size: $h1-size * $ratio;
+    margin-bottom: ($h1-size/6) * $ratio;
     $ratio: $ratio * .9;
+  }
+}
+
+div.session-form > h1 {
+  text-align: center;
+
+  span.japanese {
+    font-size: 0.8em;
   }
 }

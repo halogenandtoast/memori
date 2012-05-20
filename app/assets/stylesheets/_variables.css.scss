@@ -8,6 +8,7 @@ $max-width: 1200px; // Change to 100% for a completely fluid layout. Also, keep 
 // Fonts
 $sans: Verdana, Helvetica, Arial, sans-serif;
 $serif: Georgia,serif;
+$cursive: 'Gochi Hand', cursive;
 
 // Type size
 $body-font: 16px;
@@ -16,5 +17,7 @@ $ratio: .8;
 
 
 //colors:
-$placeholder-color: #74a457;
 $orange: #e79124;
+$green: #abc998;
+
+$placeholder-color: darken($green, 10%);

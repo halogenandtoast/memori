@@ -1,8 +1,6 @@
 <div class="text_field">
-  <%= form.label :email %>
-  <%= form.text_field :email, :type => "email" %>
+  <%= form.email_field :email, :type => "email", placeholder: "Your email" %>
 </div>
 <div class="password_field">
-  <%= form.label :password %>
-  <%= form.password_field :password %>
+  <%= form.password_field :password,placeholder: "Choose a password" %>
 </div>

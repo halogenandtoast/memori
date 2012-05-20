@@ -1,16 +1,18 @@
-<header>
-  <h1><img src="images/logo.png" alt="memori logo" /></h1>
-</header>
+<%= render 'large-header' %>
+
 <section class="main">
-  <%= form_for(:session, url: session_path, :html => { :class => "sign-in"}) do |form| %>
-    <div>
-      <%= form.email_field :email, placeholder: "Your email" %>
-    </div>
-    <div>
-      <%= form.password_field :password, placeholder: "You password" %>
-    </div>
-    <div>
-      <%= form.submit "Sign in" %>
-    </div>
-  <% end %>
+<div class="session-form"><h1>Welcome to <span class="japanese">メモリ</span></h1>
+    <%= form_for(:session, url: session_path, :html => { :class => "sign-in"}) do |form| %>
+      <div>
+        <%= form.email_field :email, placeholder: "Your email" %>
+      </div>
+      <div>
+        <%= form.password_field :password, placeholder: "You password" %>
+      </div>
+      <div>
+        <%= form.submit "Sign in" %>
+      </div>
+    <% end %>
+  </div>
 </section>
+<section class="main">

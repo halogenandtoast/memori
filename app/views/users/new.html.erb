@@ -1,6 +1,12 @@
-<h2>Sign up</h2>
+<%= render 'large-header' %>
 
-<%= form_for @user do |form| %>
-  <%= render :partial => '/users/form', :object => form %>
-  <%= form.submit 'Sign up' %>
-<% end %>
+<section class="main">
+  <div class="session-form">
+    <h1>Sign up</h1>
+
+    <%= form_for @user do |form| %>
+      <%= render :partial => '/users/form', :object => form %>
+      <%= form.submit 'Sign up' %>
+    <% end %>
+  </div>
+</section>

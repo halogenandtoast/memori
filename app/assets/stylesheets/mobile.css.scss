@@ -32,12 +32,13 @@ header {
 section.main {
   padding: 0 15px;
 
-  form.sign-in {
-    padding-top: 15px;
-    text-align: center;
-    width: 80%;
-    max-width: 400px;
+  div.session-form {
+    @include border-radius(4px);
+    background-color: white;
+    @include box-shadow(0 2px 2px $green);
     margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
 
     input {
       @include fill-parent();

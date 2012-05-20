@@ -1,12 +1,17 @@
-<h2>Sign in</h2>
+<%= render 'large-header' %>
 
-<%= render :partial => '/sessions/form' %>
+<section class="main">
+  <div class="session-form">
+  <h1>Sign in</h1>
+  <%= render :partial => '/sessions/form' %>
 
-<ul>
-  <li>
-    <%= link_to "Sign up", sign_up_path %>
-  </li>
-  <li>
-    <%= link_to "Forgot password?", new_password_path %>
-  </li>
-</ul>
+  <ul>
+    <li>
+      <%= link_to "Sign up", sign_up_path %>
+    </li>
+    <li>
+      <%= link_to "Forgot password?", new_password_path %>
+    </li>
+  </ul>
+  </div>
+</section>
