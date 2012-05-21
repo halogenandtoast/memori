@@ -52,7 +52,7 @@ module Memori
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.precompile += ['mobile.css', 'wide.css']
+    config.assets.precompile += ['mobile.css', 'wide.css', 'ios-orientationchange-fix.js']
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
