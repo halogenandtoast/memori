@@ -14,12 +14,14 @@ input[type="url"] {
 
 ::-webkit-input-placeholder {
   color: $placeholder-color;
+  font-family: $sans;
 }
 :-moz-placeholder {
   color:  $placeholder-color;
+  font-family: $sans;
 }
 
-button,
+.button, button,
 input[type="button"],
 input[type="reset"] {
   @include botan(#ccc);

@@ -5,7 +5,7 @@
   @include box-shadow(inset 0px 1px 0px lighten($color, 30%));
   color: darken($color, 30%);
   font-family: $cursive;
-  font-weight: bold;
+  font-weight: normal;
   padding: 10px 20px;
   text-shadow: 0px 1px 0px lighten($color, 30%);
   text-transform: uppercase;

@@ -1,6 +1,10 @@
 header {
   text-align: center;
 
+  &.bar {
+    text-align: left;
+  }
+
   h1 > img {
     margin: 0 auto;
     max-width: 400px;

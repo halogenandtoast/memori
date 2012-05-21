@@ -1,6 +1,7 @@
 h1, h2, h3, h4, h5 {
   font-family: $cursive;
   color: darken($green, 20%);
+  font-weight: normal;
 }
 
 h1 {
@@ -18,8 +19,4 @@ h1 {
 
 div.session-form > h1 {
   text-align: center;
-
-  span.japanese {
-    font-size: 0.8em;
-  }
 }

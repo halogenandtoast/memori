@@ -5,7 +5,7 @@
     <h1>Sign up</h1>
 
     <%= form_for @user do |form| %>
-      <%= render :partial => '/users/form', :object => form %>
+      <%= render partial: '/users/form', object: form %>
       <%= form.submit 'Sign up' %>
     <% end %>
   </div>

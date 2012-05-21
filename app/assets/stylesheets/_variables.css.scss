@@ -6,7 +6,7 @@ $column-width: (100% - ($gutter-width * ($grid-columns - 1))) / $grid-columns;
 $max-width: 1200px; // Change to 100% for a completely fluid layout. Also, keep this in mind when changing the pixel value of max-width http://ejohn.org/blog/sub-pixel-problems-in-css/
 
 // Fonts
-$sans: Verdana, Helvetica, Arial, sans-serif;
+$sans: 'Open Sans',Verdana, Helvetica, Arial, sans-serif;
 $serif: Georgia,serif;
 $cursive: 'Gochi Hand', cursive;
 
@@ -19,5 +19,6 @@ $ratio: .8;
 //colors:
 $orange: #e79124;
 $green: #abc998;
+$brown: darken($orange, 25%);
 
 $placeholder-color: darken($green, 10%);

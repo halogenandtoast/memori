@@ -14,7 +14,9 @@ html {
 }
 body {
   @extend .clearfix;
+  max-width: 100%;
   color: #555;
+  font-family: $sans;
 }
 
 div.wrapper {
@@ -27,10 +29,28 @@ header {
   h1 > img {
     @include fill-parent();
   }
+
+  &.bar {
+    @include background-image(linear-gradient(lighten($green, 5%), darken($green, 15%)));
+    border-top: 1px solid lighten($green, 20%);
+    border-bottom: 1px solid darken($green, 35%);
+    padding: 1em;
+
+    a {
+      color: white;
+      font-family: $cursive;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: darken($orange, 15%);
 }
 
 section.main {
   padding: 0 15px;
+  @include box-sizing(border-box);
 
   div.session-form {
     @include border-radius(4px);
@@ -44,5 +64,20 @@ section.main {
       @include fill-parent();
       margin: 5px 0;
     }
+
+    ul.meta-links {
+      list-style: none;
+      text-align:center;
+
+      li {
+        display: inline;
+        padding-right: 10px;
+
+      }
+    }
+  }
+
+  div.decks {
+    
   }
 }
