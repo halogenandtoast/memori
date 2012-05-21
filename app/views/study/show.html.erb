@@ -1,7 +1,7 @@
 <% content_for(:bar) do %>
   <%= link_to "Back", @card.deck, class: "back" %>
 <% end %>
-<div class="flashcard">
+<div class="flashcard flashcard-<%= @color %>">
   <span class="kanji" data-content="<%= @card.front %>"><%= @card.front %></span>
 </div>
 <div class="meaning">
@@ -11,6 +11,18 @@
 <div class="buttons">
   <%= link_to "Didn't Know", card_record_path(@record), method: :put, class: "did_not_know-button" %>
   <%= link_to 'Knew', card_record_path(@record, knew: '1'), method: :put, class: "knew-button" %>
+</div>
+
+<div class="stacks">
+  <div class="stack stack-brown">
+    <%= current_user.brown_count(@card.deck) %>
+  </div>
+  <div class="stack stack-yellow">
+    <%= current_user.yellow_count(@card.deck) %>
+  </div>
+  <div class="stack stack-green">
+    <%= current_user.green_count(@card.deck) %>
+  </div>
 </div>
 
 <div>Seen: <%= @record.seen_count %></div>

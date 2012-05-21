@@ -7,6 +7,30 @@ class User < ActiveRecord::Base
     card_records.where(card_id: deck.card_ids, active: true).first
   end
 
+  def brown_count(deck)
+    deck.cards.count - yellow_count(deck) - green_count(deck)
+  end
+
+  def yellow_count(deck)
+    yellow_cards_for_deck(deck).count
+  end
+
+  def green_count(deck)
+    green_cards_for_deck(deck).count
+  end
+
+  def brown_cards_for_deck(deck)
+    card_records.where(card_id: deck.card_ids, bucket: 0)
+  end
+
+  def yellow_cards_for_deck(deck)
+    card_records.where(card_id: deck.card_ids, bucket: 1)
+  end
+
+  def green_cards_for_deck(deck)
+    card_records.where(card_id: deck.card_ids).where("card_records.bucket > 1")
+  end
+
   def record_for_card(card)
     existing_record_for_card(card) || build_record_for_card(card)
   end

@@ -10,5 +10,11 @@ class StudyController < ApplicationController
       @record.activate!
       @record.seen!
     end
+
+    @color = case @record.bucket
+             when 0 then "brown"
+             when 1 then "yellow"
+             else "green"
+             end
   end
 end
