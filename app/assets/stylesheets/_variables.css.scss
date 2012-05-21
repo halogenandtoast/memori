@@ -20,5 +20,7 @@ $ratio: .8;
 $orange: #e79124;
 $green: #abc998;
 $brown: darken($orange, 25%);
+$light-green: lighten($green, 5%);
+
 
 $placeholder-color: darken($green, 10%);

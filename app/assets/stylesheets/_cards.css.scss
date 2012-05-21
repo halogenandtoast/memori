@@ -1,9 +1,9 @@
-$green: #009000;
+$crazygreen: #009000;
 $yellow: #D3C955;
-$brown: #4D2F15;
+$kindabrown: #4D2F15;
 .card {
   text-decoration: none;
-  background-color: $green;
+  background-color: $crazygreen;
   width: 50px;
   height: 50px;
   line-height: 52px;
@@ -36,7 +36,7 @@ $brown: #4D2F15;
 }
 
 .stack-green {
-  background: -webkit-linear-gradient(top, $green 0%, darken($green, 10%) 100%);
+  background: -webkit-linear-gradient(top, $crazygreen 0%, darken($crazygreen, 10%) 100%);
   margin-right: 0;
 }
 
@@ -45,7 +45,7 @@ $brown: #4D2F15;
 }
 
 .stack-brown {
-  background: -webkit-linear-gradient(top, $brown 0%, darken($brown, 10%) 100%);
+  background: -webkit-linear-gradient(top, $kindabrown 0%, darken($kindabrown, 10%) 100%);
 }
 
 a.study {
@@ -53,7 +53,7 @@ a.study {
 }
 
 a.knew-button {
-  @include button(shiny, $green);
+  @include button(shiny, $crazygreen);
 }
 
 a.did_not_know-button {
@@ -101,7 +101,7 @@ a.back {
 }
 
 .flashcard-brown {
-  background: -webkit-linear-gradient(top, $brown 0%, darken($brown, 10%) 100%);
+  background: -webkit-linear-gradient(top, $kindabrown 0%, darken($kindabrown, 10%) 100%);
 }
 
 .flashcard-yellow {
@@ -109,7 +109,7 @@ a.back {
 }
 
 .flashcard-green {
-  background: -webkit-linear-gradient(top, $green 0%, darken($green, 10%) 100%);
+  background: -webkit-linear-gradient(top, $crazygreen 0%, darken($crazygreen, 10%) 100%);
 }
 
 .meaning {

@@ -1,5 +1,9 @@
+<section class="main">
+
+<ul class="decks">
 <% @decks.each do |deck| %>
-  <div>
+  <li>
     <%= link_to deck.name, deck %>
-  </div>
+  </li>
 <% end %>
+</ul>

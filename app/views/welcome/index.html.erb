@@ -1,7 +1,8 @@
 <%= render 'large-header' %>
 
 <section class="main">
-<div class="session-form"><h1>Welcome to memori</h1>
+<div class="session-form">
+  <h1>Welcome to memori</h1>
     <%= form_for(:session, url: session_path, html: {class: "sign-in"}) do |form| %>
       <div>
         <%= form.email_field :email, placeholder: "Your email" %>
