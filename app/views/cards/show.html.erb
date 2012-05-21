@@ -1,7 +1,7 @@
 <% content_for(:bar) do %>
   <%= link_to "Back", @card.deck, class: "back" %>
 <% end %>
-<div class="flashcard">
+<div class="flashcard flashcard-<%= @color %>">
   <span class="kanji" data-content="<%= @card.front %>"><%= @card.front %></span>
 </div>
 <div class="meaning">
