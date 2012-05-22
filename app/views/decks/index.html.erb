@@ -2,7 +2,7 @@
 
 <ul class="decks">
 <% @decks.each do |deck| %>
-  <li>
+  <li class="deck <%= deck.size %>">
     <%= link_to deck.name, deck %>
   </li>
 <% end %>
