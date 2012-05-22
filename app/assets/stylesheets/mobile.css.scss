@@ -86,7 +86,22 @@ section.main {
       margin-bottom: 20px;
       text-align: center;
       min-height: 200px;
-      // font-family: $cursive;
+
+      &.small {
+        @include deck-size(small);
+      }
+
+      &.medium {
+        @include deck-size(medium);
+      }
+
+      &.large {
+        @include deck-size(large);
+      }
+
+      &.x-large {
+        @include deck-size(x-large);
+      }
     }
   }
 }

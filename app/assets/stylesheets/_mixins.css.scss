@@ -13,10 +13,26 @@
 
 @mixin card {
   border: 1px solid $light-green;
-  // @include box-shadow(0 2px 2px $green);
-  background-color: white;
+  @include background-image(linear-gradient(lighten($green, 27%), #fff));
   @include border-radius(4px);
-  @include box-shadow(inset 0 0px 10px lighten($green, 30%), 0 5px 0 -4px #fff, 0 5px 0 -3px $light-green, 0 11px 0 -8px #fff, 0 11px 0 -7px $light-green, 0 17px 0 -12px #fff, 0 17px 0 -11px $light-green);
   padding: 20px;
+}
+
+@mixin deck-size($size: medium) {
+  @if $size == small {
+    @include box-shadow(inset 0 1px 0px #fff, 0 5px 0 -4px #fff, 0 5px 0 -3px $light-green);
+  }
+
+   @else if $size == medium {
+    @include box-shadow(inset 0 1px 0px #fff, 0 5px 0 -4px #fff, 0 5px 0 -3px $light-green, 0 11px 0 -8px #fff, 0 11px 0 -7px $light-green);
+  }
+
+   @else if $size == large {
+    @include box-shadow(inset 0 1px 0px #fff, 0 5px 0 -4px #fff, 0 5px 0 -3px $light-green, 0 11px 0 -8px #fff, 0 11px 0 -7px $light-green, 0 17px 0 -12px #fff, 0 17px 0 -11px $light-green);
+  }
+
+   @else if $size == x-large {
+    @include box-shadow(inset 0 1px 0px #fff, 0 5px 0 -4px #fff, 0 5px 0 -3px $light-green, 0 11px 0 -8px #fff, 0 11px 0 -7px $light-green, 0 17px 0 -12px #fff, 0 17px 0 -11px $light-green, 0 23px 0 -16px #fff, 0 23px 0 -15px $light-green);
+  }
 
 }
