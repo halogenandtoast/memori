@@ -1,6 +1,6 @@
 <% if signed_in? %>
   <header class="bar">
     <%= yield :bar %>
-    <%= link_to "Sign out", sign_out_path, method: :delete %>
+    <%= link_to "Sign out", sign_out_path, method: :delete, class: "button" %>
   </header>
 <% end %>

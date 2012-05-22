@@ -1,13 +1,16 @@
 <% content_for :bar do %>
   <%= link_to "Back", decks_path, class: "back" %>
-<% end %>
-<header>
   <h1><%= @deck.name %></h1>
-  <%= link_to "Study", [:study, @deck], class: "study" %>
-</header>
+<% end %>
 
-<section>
-  <% @cards.each do |card| %>
-    <%= link_to card.front, card, class: "card" %>
-  <% end %>
+<section class="main">
+    <%= link_to "Study", [:study, @deck], class: "study" %>
+
+  <ul class="cards">
+    <% @cards.each do |card| %>
+      <li>
+      <%= link_to card.front, card, class: "card" %>
+      </li>
+    <% end %>
+  </ul>
 </section>
