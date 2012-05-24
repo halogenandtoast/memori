@@ -1,9 +1,10 @@
 <% content_for :bar do %>
   <%= link_to "Back", decks_path, class: "back" %>
-  <h1><%= @deck.name %></h1>
 <% end %>
 
 <section class="main">
+  <h1><%= @deck.name %></h1>
+
     <%= link_to "Study", [:study, @deck], class: "study" %>
 
   <ul class="cards">
