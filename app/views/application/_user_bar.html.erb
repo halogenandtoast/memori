@@ -1,7 +1,8 @@
 <% if signed_in? %>
   <header class="bar">
     <%= yield :bar %>
-    <li calss="sign-out">
+    <li class="sign-out">
+      <img src="/images/logout.svg" alt="" />
     <%= link_to "Sign out", sign_out_path, method: :delete %>
     </li>
   </header>
